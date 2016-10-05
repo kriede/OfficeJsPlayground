@@ -36,7 +36,7 @@
                     return 'powerpoint';
                 } else if (Office.context.requirements.isSetSupported('OoxmlCoercion')) {
                     return 'word'; // for older versions of Word
-                } else if (Office.context.requirements.isSetSupported('TextCoercion')) {
+                } else if (Office.context.document.getSelectedTaskAsync) {
                     return 'project';
                 }
                  
