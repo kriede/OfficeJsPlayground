@@ -113,6 +113,7 @@ export class RunComponent extends BaseComponent implements OnInit, OnDestroy {
                             iframeWindow['Excel'] = (<any>window).Excel;
                             iframeWindow['Word'] = (<any>window).Word;
                             iframeWindow['OneNote'] = (<any>window).OneNote;
+                            iframeWindow['Project'] = (<any>window).Project;
 
                             var requestedOfficeJs = this._snippet.getOfficeJsReference();
                             var normalizeReference = Utilities.normalizeUrl(requestedOfficeJs).toLowerCase(); 
