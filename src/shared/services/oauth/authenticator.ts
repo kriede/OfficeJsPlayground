@@ -96,7 +96,7 @@ export class Authenticator {
 
     /**
      * Check if the code is running inside of an Addin or Web Context.
-     * The checks for Office and Word, Excel or OneNote objects.
+     * The checks for Office and Word, Excel, Project or OneNote objects.
      */
     private static _isAddin: boolean;
     static get isAddin() {
@@ -106,7 +106,8 @@ export class Authenticator {
                 (
                     window.hasOwnProperty('Word') ||
                     window.hasOwnProperty('Excel') ||
-                    window.hasOwnProperty('OneNote')
+                    window.hasOwnProperty('OneNote') ||
+                    window.hasOwnProperty('Project')
                 );
         }
 
