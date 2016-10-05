@@ -36,6 +36,10 @@ export class HomeComponent extends BaseComponent {
         this._navigateCommon("onenote");
     }
 
+    navigateToOneNote() {
+        this._navigateCommon("project");
+    }
+
     private _navigateCommon(context: string) {
         ContextUtil.setContext(context);
 
