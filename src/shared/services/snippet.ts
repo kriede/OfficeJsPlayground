@@ -288,8 +288,6 @@ export class Snippet implements ISnippet {
             return 'word';
         } else if (this.script.indexOf('OneNote.run(') > 0) {
             return 'onenote';
-        } else if (this.script.indexOf('Project.run(') > 0) {
-            return 'project';
         }
 
         return '';
