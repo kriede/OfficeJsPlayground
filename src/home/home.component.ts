@@ -36,7 +36,7 @@ export class HomeComponent extends BaseComponent {
         this._navigateCommon("onenote");
     }
 
-    navigateToOneNote() {
+    navigateToProject() {
         this._navigateCommon("project");
     }
 
