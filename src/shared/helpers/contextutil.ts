@@ -5,7 +5,8 @@ export enum ContextType {
     Excel,
     Word,
     PowerPoint,
-    OneNote
+    OneNote,
+    Project
 }
 
 export class ContextUtil {
@@ -76,6 +77,8 @@ export class ContextUtil {
                 return ContextType.PowerPoint;
             case 'onenote':
                 return ContextType.OneNote;
+            case 'project':
+                return ContextType.Project;
             default:
                 return ContextType.Unknown;
         }
@@ -91,6 +94,7 @@ export class ContextUtil {
             case ContextType.Word:
             case ContextType.PowerPoint:
             case ContextType.OneNote:
+            case ContextType.Project:
                 return true;
 
             default:
@@ -108,6 +112,8 @@ export class ContextUtil {
                 return 'PowerPoint'
             case ContextType.OneNote:
                 return 'OneNote';
+            case ContextType.Project:
+                return 'Project';
             default:
                 throw new Error("Invalid context type for Office namespace");
         }
@@ -123,6 +129,8 @@ export class ContextUtil {
                 return null; // Intentionally missing until PowerPoint has the new host-specific API model
             case ContextType.OneNote:
                 return 'OneNote';
+            case ContextType.Project:
+                return 'Project';
             default:
                 throw new Error("Invalid context type for Office namespace");
         }
@@ -138,6 +146,8 @@ export class ContextUtil {
                 return '#d04526'
             case ContextType.OneNote:
                 return '#80397b';
+            case ContextType.Project:
+                return '#217346';
             default:
                 return '#0478d7';
         }
@@ -153,6 +163,8 @@ export class ContextUtil {
                 return '#a5371e'
             case ContextType.OneNote:
                 return '#5d2959';
+            case ContextType.Project:
+                return '#164b2e';
             default:
                 return '#0360AF';
         }
@@ -163,6 +175,7 @@ export class ContextUtil {
         $('body').removeClass('word');
         $('body').removeClass('powerpoint');
         $('body').removeClass('onenote');
+        $('body').removeClass('project');
         $('body').removeClass('generic');
 
         switch (ContextUtil.context) {
@@ -170,6 +183,7 @@ export class ContextUtil {
             case ContextType.Word: $('body').addClass('word'); break;
             case ContextType.PowerPoint: $('body').addClass('powerpoint'); break;
             case ContextType.OneNote: $('body').addClass('onenote'); break;
+            case ContextType.Project: $('body').addClass('project'); break;
 
             default: $('body').addClass('generic'); break;
         }
