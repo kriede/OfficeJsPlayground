@@ -1,0 +1,14 @@
+{
+    "groups": [
+        {
+            "name": "General Starter Templates",
+            "items": [
+                {
+                    "name": "Add-in with notification toast",
+                    "description": "Read selected task and reports its name  via a Fabric-based notification toast.",
+                    "gistId": ""
+                }
+            ]
+        }
+    ]
+}
