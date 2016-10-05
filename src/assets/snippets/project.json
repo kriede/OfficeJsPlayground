@@ -1,12 +1,12 @@
 {
     "groups": [
         {
-            "name": "General Starter Templates",
+            "name": "Common APIs (host-agnostic)",
             "items": [
                 {
-                    "name": "Add-in with notification toast",
-                    "description": "Read selected task and reports its name  via a Fabric-based notification toast.",
-                    "gistId": ""
+                    "name": "Get selected data",
+                    "description": "Gets the text of the current selection",
+                    "gistId": "a48e903258c0e4cf74615e4c8aafaada"
                 }
             ]
         }
