@@ -17,6 +17,7 @@
     <Host Name="Document" />
     <Host Name="Presentation"/>
     <Host Name="Notebook"/>
+    <Host Name="Project"/>
   </Hosts>
   <AppDomains>
     <AppDomain>https://github.com</AppDomain>
@@ -101,6 +102,40 @@
         <DesktopFormFactor>
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
+              <Group id="Play.Group">
+                <Label resid="Play.GroupLabel" />
+                <Icon>
+                    <bt:Image size="16" resid="Play_icon_16" />
+                    <bt:Image size="32" resid="Play_icon_32" />
+                    <bt:Image size="80" resid="Play_icon_80" />
+                </Icon>
+
+                <Control xsi:type="Button" id="Play.TaskpaneButton">
+                  <Label resid="Play.TaskpaneButton.Label" />
+                  <Supertip>
+                    <Title resid="Play.TaskpaneButton.TipTitle" />
+                    <Description resid="Play.Supertip.Desc" />
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Play_icon_16" />
+                    <bt:Image size="32" resid="Play_icon_32" />
+                    <bt:Image size="80" resid="Play_icon_80" />
+                  </Icon>
+
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>Play</TaskpaneId>
+                    <SourceLocation resid="Play_Taskpane_Url" />
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+      <Host xsi:type="Project">
+        <DesktopFormFactor>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabDeveloper">
               <Group id="Play.Group">
                 <Label resid="Play.GroupLabel" />
                 <Icon>
